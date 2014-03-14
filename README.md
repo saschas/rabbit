@@ -42,9 +42,10 @@ use *data-button-style* for buttons
 ---
 
 ### ToDos
-documentation
-Files that are used
+- documentation
+- Files that are used
 
-| Method | todo | description |
+
+| Method | todo | description |
 | slideshow | loop through left |  |
 | slideshow | caption | add option caption(bool) |
