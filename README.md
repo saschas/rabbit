@@ -9,11 +9,11 @@ A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Mod
   		'pagination':true,
   		'loop':true,
   		'height':300,
-  		'width':100,
+  		'width':100
   	}
 //init with
 rabbit.slideshow($options);
-
+`
 
 
 | Name          | Option       | default| description |
