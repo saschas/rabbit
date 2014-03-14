@@ -4,12 +4,13 @@ A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Mod
 
 ## simple slideshow
 
-| Name | Option | default | description
-| --- | --- | --- | ---
-| **width** | % | *300* | set width in percentage
-| **height** | px | *100* | set height in px
-| **pagination** | true/false | *true* | show pagination
-| **loop** | true/false | *true* | loops through all images and start with the first one if you hit the last
+| Name          | Option       | default| description |
+| ------------- |:------------:| ------:| -------:|
+| **width**     | %            | *100*  | set width in percentage   |
+| **height**    | px           | *300*  | set height in px   |
+| **pagination**| true/false   | *true* | show pagination  |
+| **loop**      | true/false   | *true* | loops through all images and start with the first one if you hit the last  |
+
 
 ```javascript
 //init with
