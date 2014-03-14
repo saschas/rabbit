@@ -17,7 +17,10 @@ $(document).ready(function(){
 })();
 
 	var $options = {
-  		'pagination':true //default true
+  		'pagination':true, //default true
+  		'loop':true, //known issue: only if you slide right
+  		'height':300,	//in px
+  		'width':100,	//in %
   	}
   //init with arguments
   rabbit.slideshow($options);

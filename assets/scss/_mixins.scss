@@ -64,3 +64,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
 	transform:translate($x);
 }
 
+@mixin scale($x:0){
+	-webkit-transform:scale($x);
+	-moz-transform:scale($x);
+	-o-transform:scale($x);
+	transform:scale($x);
+}
+
+@mixin blur($x:0){
+	-webkit-filter:blur($x);
+	-moz-filter:blur($x);
+	-o-filter:blur($x);
+	filter:blur($x);
+}
+

@@ -20,13 +20,13 @@
 					:escaped
 						<script>
 						  //initialize the slideshow
-						  rabbit.slideshow();
-
-						  //all options
-						  $arg = {
-						  'pagination':false //default true
-						  }
+						  var $options = {
+						  		'pagination':true, //default true
+						  		'loop':true, //known issue: only if you slide right
+						  		'height':300,	//in px - default 300px
+						  		'width':100,	//in % - default 100%
+						  	}
 						  //init with arguments
-						  rabbit.slideshow($arg);
+						  rabbit.slideshow($options);
 						</script>
 		%span.more view example

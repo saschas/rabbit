@@ -3,7 +3,6 @@
 	height:300px;
 	background:#eee;
 	position:relative;
-	padding:20px;
 	overflow:hidden;
 	& li{
 		width:$full;
@@ -18,9 +17,17 @@
 		opacity:0;
 		
 		& img{
-			height:100%;
-			max-width:100%;
-			max-height:100%;
+			max-height: 100%;
+			max-width: 100%;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			position: absolute;
+			width: 100%;
+			height: auto !Important;
+			width: auto !important;
 		}
 
 		&.active{
@@ -78,21 +85,20 @@
 	}
 }
 .pagination {
-	width: 100%;
 	background: #ccc;
 
 	& li {
 		float: left;
 		list-style-type: none;
 		position:relative;
-		height: 25px;
+		height: 15px;
 		background-color: #ccc;
 		cursor:pointer;
-		@include inset-box-shadow(-1px,-1px,2px,0,#000);
+		@include inset-box-shadow(0,0,10px,0,#000);
 		
 		&:hover{
 			background-color: #222;
-			@include inset-box-shadow(0px,0px,2px,0,#000)
+			@include inset-box-shadow(0,0,10px,0,#000)
 		}
 
 		&.active{

@@ -1,0 +1,228 @@
+button[data-button='overlay']{
+	border:none;
+	padding:10px 20px;
+	background:#ccc;
+	cursor:pointer;
+}
+div[data-type='overlay']{
+	position:fixed;
+	width:100%;
+	display:none;
+	top:0;
+	left:0;
+	background:rgba(255,150,150,.95);
+	z-index:9999;
+	color:#fff;
+	opacity:0;
+	height:0;
+
+	& .inner{
+		width:100%;
+		height:100%;
+		position:absolute;
+		padding:10%;
+
+		p{
+			display:block;
+			position:absolute;
+			text-align:center;
+			height:30px;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			margin:auto;
+		}
+	}
+}
+
+
+//Simple
+div[data-overlay-type="simple"].active{
+	opacity:1;
+	display:block;
+	height:100%;
+	@include animation(simple-overlay-in,1s);
+}
+div[data-overlay-type="simple"].inactive{
+	opacity:0;
+	display:block;
+	height:100%;
+	pointer-events:none;
+	@include animation(simple-overlay-out,1s);
+}
+
+//Simple In
+@mixin simple-overlay-in(){
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+@-webkit-keyframes simple-overlay-in{
+	@include simple-overlay-in;
+}
+@-moz-keyframes simple-overlay-in{
+	@include simple-overlay-in;
+}
+@-o-keyframes simple-overlay-in{
+	@include simple-overlay-in;
+}
+@keyframes simple-overlay-in{
+	@include simple-overlay-in;
+}
+
+//Simple Out
+@mixin simple-overlay-out(){
+	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+}
+
+@-webkit-keyframes simple-overlay-out{
+	@include simple-overlay-out;
+}
+@-moz-keyframes simple-overlay-out{
+	@include simple-overlay-out;
+}
+@-o-keyframes simple-overlay-out{
+	@include simple-overlay-out;
+}
+@keyframes simple-overlay-out{
+	@include simple-overlay-out;
+}
+
+
+//Scale-in
+div[data-overlay-type="scale-in"].active{
+	opacity:1;
+	display:block;
+	height:100%;
+	@include animation(scale-in,1s);
+}
+div[data-overlay-type="scale-in"].inactive{
+	opacity:0;
+	display:block;
+	height:100%;
+	pointer-events:none;
+	@include animation(scale-out,1s);
+}
+
+//Scale In
+@mixin scale-in(){
+	0%{
+		opacity:0;
+		@include scale(0);
+	}
+	100%{
+		opacity:1;
+		@include scale(1);
+	}
+}
+@-webkit-keyframes scale-in{
+	@include scale-in;
+}
+@-moz-keyframes scale-in{
+	@include scale-in;
+}
+@-o-keyframes scale-in{
+	@include scale-in;
+}
+@keyframes scale-in{
+	@include scale-in;
+}
+
+//Scale Out
+@mixin scale-out(){
+	0%{
+		opacity:1;
+		@include scale(1);
+	}
+	100%{
+		opacity:0;
+		@include scale(0);
+	}
+}
+
+@-webkit-keyframes scale-out{
+	@include scale-out;
+}
+@-moz-keyframes scale-out{
+	@include scale-out;
+}
+@-o-keyframes scale-out{
+	@include scale-out;
+}
+@keyframes scale-out{
+	@include scale-out;
+}
+
+
+//Blur
+div[data-overlay-type="blur"].active{
+	opacity:1;
+	display:block;
+	height:100%;
+	@include animation(blur-in,1s);
+}
+div[data-overlay-type="blur"].inactive{
+	opacity:0;
+	display:block;
+	height:100%;
+	pointer-events:none;
+	@include animation(blur-out,1s);
+}
+
+//Blur In
+@mixin blur-in(){
+	0%{
+		opacity:0;
+		@include blur(100px);
+	}
+	100%{
+		opacity:1;
+		@include blur(0);
+	}
+}
+@-webkit-keyframes blur-in{
+	@include blur-in;
+}
+@-moz-keyframes blur-in{
+	@include blur-in;
+}
+@-o-keyframes blur-in{
+	@include blur-in;
+}
+@keyframes blur-in{
+	@include blur-in;
+}
+
+//Blur Out
+@mixin blur-out(){
+	0%{
+		opacity:1;
+		@include blur(0);
+	}
+	100%{
+		opacity:0;
+		@include blur(100px);
+	}
+}
+
+@-webkit-keyframes blur-out{
+	@include blur-out;
+}
+@-moz-keyframes blur-out{
+	@include blur-out;
+}
+@-o-keyframes blur-out{
+	@include blur-out;
+}
+@keyframes blur-out{
+	@include blur-out;
+}
