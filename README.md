@@ -6,15 +6,24 @@ A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Mod
 
 #### simple slideshow
 
+```
+<ul class="slideshow">
+  <li><img src="bild-1.jpg" alt="bild"/></li>
+  <li><img src="bild-1.jpg" alt="bild"/></li>
+  <li><img src="bild-1.jpg" alt="bild"/></li>
+</ul>
+
+```
+
 ```javascript
-	var $options = {
-	  		'pagination':true,
-	  		'loop':true,
-	  		'height':300,
-	  		'width':100
-	  	}
-	//init with
-	rabbit.slideshow($options);
+var $options = {
+  		'pagination':true,
+  		'loop':true,
+  		'height':300,
+  		'width':100
+  	}
+//init with
+rabbit.slideshow($options);
 ```
 
 
