@@ -12,11 +12,10 @@ Name | Option | default | description
 **loop** | true/false | *true* | loops through all images and start with the first one if you hit the last
 
 ```javascript
-	//init with
-	rabbit.slideshow($options);
+//init with
+rabbit.slideshow($options);
 
 ---
-
 
 ## overlays
 use *data-button-style* for buttons
