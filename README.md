@@ -2,6 +2,8 @@ rabbit
 ======
 A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Module tries to be independent as possible but requires jQuery and Modernizr.
 
+---
+
 #### simple slideshow
 
 ```javascript
@@ -41,7 +43,8 @@ use *data-button-style* for buttons
 
 ### ToDos
 documentation
+Files that are used
 
-Method | todo | description
-slideshow | loop through left | 
-slideshow | caption | add option caption(bool)
+| Method | todo | description |
+| slideshow | loop through left |  |
+| slideshow | caption | add option caption(bool) |
