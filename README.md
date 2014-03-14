@@ -4,6 +4,12 @@ A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Mod
 
 ## simple slideshow
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 Name | Option | default | description
 --- | --- | --- | ---
 **width** | % | *300* | set width in percentage
