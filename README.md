@@ -12,8 +12,8 @@ A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Mod
   		'width':100
   	}
 //init with
-rabbit.slideshow($options);
-`
+rabbit.slideshow($options);```
+
 
 
 | Name          | Option       | default| description |
