@@ -1,0 +1,1 @@
+var createNavi=function(){var e=document.createElement("div");e.setAttribute("class","slideshow-navi");var t=document.createElement("div");t.setAttribute("class","slideshow-right");var n=document.createElement("div");n.setAttribute("class","slideshow-right");e.appendChild(t,n);$(".slideshow").append(e)};createNavi();

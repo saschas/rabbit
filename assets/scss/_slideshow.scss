@@ -1,0 +1,205 @@
+.slideshow{
+	width:$full;
+	height:300px;
+	background:#eee;
+	position:relative;
+	padding:20px;
+	overflow:hidden;
+	& li{
+		width:$full;
+		height:$full*.95;
+		left:0;
+		right:0;
+		top:$full*.025;
+		margin:auto;
+		text-align:center;
+		list-style-type:none;
+		position:absolute;
+		opacity:0;
+		
+		& img{
+			height:100%;
+			max-width:100%;
+			max-height:100%;
+		}
+
+		&.active{
+			opacity:1;
+		}
+		&.active.slide-in-left{			
+			@include animation(slideInLeft,1s);
+		}
+		&.active.slide-in-right{			
+			@include animation(slideInRight,1s);
+		}
+		&.slide-out-left{
+			@include animation(slideOutleft,1s);
+		}
+		&.slide-out-right{
+			@include animation(slideOutright,1s);
+		}
+	}
+	& .slideshow-navi {
+		position: absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		& .slideshow-left, .slideshow-right{
+			width: 0px;
+			height: 0px;
+			position:absolute;
+			top:0;
+			bottom:0;
+			margin:auto;
+			cursor:pointer;
+		}
+		& .slideshow-left{
+			left:-15px;
+			border-left:25px solid transparent;
+			border-top:25px solid transparent;
+			border-right:25px solid #ccc;
+			border-bottom:25px solid transparent;
+			&:hover{
+				border-right:25px solid #222;
+			}
+		}
+		& .slideshow-right{
+			right:-15px;
+			border-left:25px solid #ccc;
+			border-top:25px solid transparent;
+			border-right:25px solid transparent;
+			border-bottom:25px solid transparent;
+
+			&:hover{
+				border-left:25px solid #222;
+			}
+		}
+	}
+}
+.pagination {
+	width: 100%;
+	background: #ccc;
+
+	& li {
+		float: left;
+		list-style-type: none;
+		position:relative;
+		height: 25px;
+		background-color: #ccc;
+		cursor:pointer;
+		@include inset-box-shadow(-1px,-1px,2px,0,#000);
+		
+		&:hover{
+			background-color: #222;
+			@include inset-box-shadow(0px,0px,2px,0,#000)
+		}
+
+		&.active{
+			background:#222;
+		}
+	}
+	
+}
+//Keyframes slideInLeft
+$slideWidth:50%;
+
+@mixin keyframe-slideInLeft(){
+	0%{
+		opacity:0;
+		@include translate(-$slideWidth);
+	}
+	100%{
+		opacity:1;
+		@include translate(0);
+	}
+}
+
+@-webkit-keyframes slideInLeft{
+	@include keyframe-slideInLeft;
+}
+@-moz-keyframes slideInLeft{
+	@include keyframe-slideInLeft;
+}
+@-o-keyframes slideInLeft{
+	@include keyframe-slideInLeft;
+}
+@keyframes slideInLeft{
+	@include keyframe-slideInLeft;
+}
+
+
+//Keyframes slideInRight
+@mixin keyframe-slideInRight(){
+	0%{
+		opacity:0;
+		@include translate($slideWidth);	
+	}
+	100%{
+		opacity:1;
+		@include translate(0);
+	}
+}
+
+@-webkit-keyframes slideInRight{
+	@include keyframe-slideInRight;
+}
+@-moz-keyframes slideInRight{
+	@include keyframe-slideInRight;
+}
+@-o-keyframes slideInRight{
+	@include keyframe-slideInRight;
+}
+@keyframes slideInRight{
+	@include keyframe-slideInRight;
+}
+
+//Keyframes slideOutleft
+@mixin keyframe-slideOutleft(){
+	0%{
+		opacity:1;
+		@include translate(0);	
+	}
+	100%{
+		opacity:0;
+		@include translate(-$slideWidth);
+	}
+}
+
+@-webkit-keyframes slideOutleft{
+	@include keyframe-slideOutleft;
+}
+@-moz-keyframes slideOutleft{
+	@include keyframe-slideOutleft;
+}
+@-o-keyframes slideOutleft{
+	@include keyframe-slideOutleft;
+}
+@keyframes slideOutleft{
+	@include keyframe-slideOutleft;
+}
+
+//Keyframes slideOutright
+@mixin keyframe-slideOutright(){
+	0%{
+		opacity:1;
+		@include translate(0);	
+	}
+	100%{
+		opacity:0;
+		@include translate($slideWidth);
+	}
+}
+
+@-webkit-keyframes slideOutright{
+	@include keyframe-slideOutright;
+}
+@-moz-keyframes slideOutright{
+	@include keyframe-slideOutright;
+}
+@-o-keyframes slideOutright{
+	@include keyframe-slideOutright;
+}
+@keyframes slideOutright{
+	@include keyframe-slideOutright;
+}

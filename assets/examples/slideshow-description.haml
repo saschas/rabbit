@@ -1,0 +1,32 @@
+.description
+	.title 
+		%h2 slideshow
+	.inner
+		%h1 Basic Slideshow
+		%p Just another very simple slideshow.  
+		%pre 
+			%code
+				= preserve do
+					:escaped
+						<!--basic markup-->
+						<ul class="slideshow">
+						  <li><img src="bild-1.jpg" alt="bild"/></li>
+						  <li><img src="bild-1.jpg" alt="bild"/></li>
+						  <li><img src="bild-1.jpg" alt="bild"/></li>
+						</ul>
+		%pre 
+			%code
+				= preserve do
+					:escaped
+						<script>
+						  //initialize the slideshow
+						  rabbit.slideshow();
+
+						  //all options
+						  $arg = {
+						  'pagination':false //default true
+						  }
+						  //init with arguments
+						  rabbit.slideshow($arg);
+						</script>
+		%span.more view example

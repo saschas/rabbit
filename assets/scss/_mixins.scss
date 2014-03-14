@@ -1,0 +1,66 @@
+@mixin box-sizing(){
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+@mixin clearfix{
+	&::after{
+		content:'';
+		display:block;
+		clear:both;
+	}
+}
+
+@mixin fonts($size:13px){
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+	font-size:$size;
+}
+
+@mixin box-shadow($x:0,$y:0,$feather:5px,$dist:0,$color:#000){
+	-webkit-box-shadow:$x $y $feather $dist $color;
+	-moz-box-shadow:$x $y $feather $dist $color;
+	-o-box-shadow:$x $y $feather $dist $color;
+	box-shadow:$x $y $feather $dist $color;
+}
+
+@mixin inset-box-shadow($x:0,$y:0,$feather:5px,$dist:0,$color:#000){
+	-webkit-box-shadow:inset $x $y $feather $dist $color;
+	-moz-box-shadow:inset $x $y $feather $dist $color;
+	-o-box-shadow:inset $x $y $feather $dist $color;
+	box-shadow:inset $x $y $feather $dist $color;
+}
+
+@mixin gray-gradient(){
+	background: rgb(242,242,242); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(242,242,242,1) 0%, rgba(221,221,221,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,242,242,1)), color-stop(100%,rgba(221,221,221,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin duration($duration:0.5s){
+	-webkit-transition-duration:$duration;
+	-moz-transition-duration:$duration;
+	-o-transition-duration:$duration;
+	transition-duration:$duration;
+}
+
+@mixin animation($animationName, $duration){
+	-webkit-animation:$animationName $duration;
+	-moz-animation:$animationName $duration;
+	-o-animation:$animationName $duration;
+	animation:$animationName $duration;
+}
+
+@mixin translate($x:0){
+	-webkit-transform:translate($x);
+	-moz-transform:translate($x);
+	-o-transform:translate($x);
+	transform:translate($x);
+}
+

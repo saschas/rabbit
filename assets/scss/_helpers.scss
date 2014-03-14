@@ -1,0 +1,84 @@
+#main-wrapper {
+	width: 90%;
+	min-height: 100%;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	border-left: 1px solid pink;
+	border-right: 1px solid pink;
+}
+.description{
+	width:100%;
+	margin:10px auto;
+	border:3px solid #eee;
+	position:relative;
+
+	&::after{
+		content:'';
+		display:block;
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		margin:-1px;
+		border:1px solid #ccc;
+		z-index:1;
+	}
+	& .inner{		
+		padding:30px 20px;
+
+		& h1{
+			margin:0 0 20px;
+			padding-bottom:5px;
+			border-bottom:1px solid #ccc;
+		}
+
+		& pre {
+			margin: 10px 0;
+		}
+
+		& span.more {
+			position: absolute;
+			padding: 5px;
+			bottom: 5px;
+			right: 5px;
+			background: #222;
+			color: #fff;
+			border-radius: 3px;
+			cursor: pointer;
+			z-index: 2;
+		}
+	}
+
+	& .title{
+		font-size:12px;
+		color:#444;
+		cursor:pointer;
+		padding:10px 20px;
+		background:#ccc;
+		text-shadow:1px 1px #fff;
+		text-transform:uppercase;
+		position:relative;
+		z-index:2;
+		border-bottom:1px solid #ccc;
+		@include gray-gradient;
+	}
+}
+
+#main-wrapper .preview{
+	opacity:0;
+	height:0;
+	display:none;
+	@include duration(1s);
+	@include clearfix;
+	@include inset-box-shadow(0,0,15px,0,#000);
+	background: #999;
+	padding: 20px;
+}
+#main-wrapper .open .preview{
+	opacity:1;
+	display:block;
+	height:inherit;
+}
