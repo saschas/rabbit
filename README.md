@@ -2,7 +2,7 @@ rabbit
 ======
 A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Module tries to be independent as possible but requires jQuery and Modernizr.
 
-## simple slideshow
+#### simple slideshow
 
 ```javascript
 	var $options = {
@@ -18,7 +18,7 @@ A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Mod
 
 
 | Name          | Option       | default| description |
-| ------------- |:------------:| ------:| :-------|
+| ------------- |:------------:| :-----:| :-------|
 | **width**     | %            | *100*  | set width in percentage   |
 | **height**    | px           | *300*  | set height in px   |
 | **pagination**| true/false   | *true* | show pagination  |
@@ -26,7 +26,7 @@ A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Mod
 
 ---
 
-## overlays
+#### overlays
 use *data-button-style* for buttons
 *data-overlay-type* for the overlay itself
 
