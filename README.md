@@ -1,6 +1,6 @@
 rabbit
 ======
-A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Module tries to be independent as possible but requires jQuery and Modernizr.
+A little Sandbox — Playground to test snippets, grids or modules. Each Module tries to be as independent as possible but requires at least jQuery. 
 
 
 ---
@@ -25,7 +25,12 @@ A little grid system starts with col- and than just 1-2 (1/2) and so on
     </div>
   </div>
 ```
-
+| classname | width |
+| --- | --- |
+| .col-1-1 | 1 / 1 |
+| .col-1-2 | 1 / 2 |
+| .col-1-3 | 1 / 3 |
+| .col-1-4 | 1 / 4 |
 
 ---
 
@@ -70,6 +75,11 @@ use *data-button-style* for buttons
 | simple overlay | simple fades in and out |
 | scale-in | scales in |
 | blur | blurs in !!!Caution - *these type of filters slow down performance*!!! |
+| rotate | simple rotates in and out |
+| rotate-x | simple rotates-x in and out |
+| rotate-y | simple rotates-y in and out |
+| slide-y-top | slide in and out from top |
+| slide-y-bottom | slide in and out from bottom |
 
 
 ---
@@ -97,3 +107,4 @@ data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
 | ------------- |:------------:| :-------|
 | **slideshow** | loop through left |   |
 | **slideshow** | caption      | add option caption(bool) |
+| **testing** | test in all major browsers      |  |
