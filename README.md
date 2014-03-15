@@ -5,11 +5,11 @@ A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Mod
 
 ---
 
-- [#grid](#grid)
-- [#simple-slideshow](#simple-slideshow)
-- [#overlays](#overlays)
-- [#aspect-ratio](#aspect-ratio)
-- [#todos](#todos)
+- [grid](#grid)
+- [slideshow](#simple-slideshow)
+- [overlays](#overlays)
+- [aspect ratio](#aspect-ratio)
+- [todos](#todos)
 
 
 ---
