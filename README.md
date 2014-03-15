@@ -36,7 +36,7 @@ A little grid system starts with col- and than just 1-2 (1/2) and so on
 
 #### simple slideshow
 
-```
+```html
 <ul class="slideshow">
   <li><img src="bild-1.jpg" alt="bild"/></li>
   <li><img src="bild-1.jpg" alt="bild"/></li>
@@ -70,7 +70,7 @@ rabbit.slideshow($options);
 use *data-button-style* for buttons
 *data-overlay-type* for the overlay itself
 
-```
+```html
 <button data-button-style="simple" data-button="overlay">simple</button>
 <div data-overlay-type="simple" data-type="overlay" class="active">
 	<div class="inner">
@@ -98,7 +98,7 @@ use *data-button-style* for buttons
 Divs keep aspect ratio
 data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
 
-```
+```html
 <div data-ratio="1-1" data-type="aspect-ratio">
     <div class="inner">
       <p>1-1 Aspect Ratio</p>
