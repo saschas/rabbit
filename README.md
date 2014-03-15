@@ -17,7 +17,7 @@ A little Sandbox — Playground to test snippets, grids or modules. Each Module 
 
 A little grid system starts with col- and than just 1-2 (1/2) and so on
 
-```
+```html
 <div class="box col-1-2">
     <div class="inner">
       <img src="img1.jpg">
