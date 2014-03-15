@@ -28,12 +28,16 @@
 		z-index:1;
 	}
 	& .inner{		
-		padding:30px 20px;
+		padding:0;
 
+		& *{
+			display:none;
+		}
 		& h1{
 			margin:0 0 20px;
 			padding-bottom:5px;
 			border-bottom:1px solid #ccc;
+
 		}
 
 		& pre {
@@ -43,13 +47,14 @@
 		& span.more {
 			position: absolute;
 			padding: 5px;
-			bottom: 5px;
 			right: 5px;
+			top:8px;
 			background: #222;
 			color: #fff;
 			border-radius: 3px;
 			cursor: pointer;
 			z-index: 2;
+			display:block !important;
 		}
 	}
 
@@ -78,8 +83,21 @@
 	background: #999;
 	padding: 20px;
 }
-#main-wrapper .open .preview{
-	opacity:1;
-	display:block;
-	height:inherit;
+#main-wrapper .open{
+	& .preview{
+		opacity:1;
+		display:block;
+		height:inherit;
+	}
+	& .description{
+		& .inner{
+			& *{
+				display:inline-block;
+			}
+			& h1, pre{
+				display:block;
+			}
+			padding:30px 20px
+		}
+	}
 }

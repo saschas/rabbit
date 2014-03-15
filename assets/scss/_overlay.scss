@@ -3,6 +3,7 @@ button[data-button='overlay']{
 	padding:10px 20px;
 	background:#ccc;
 	cursor:pointer;
+	margin-bottom: 5px;
 }
 div[data-type='overlay']{
 	position:fixed;
@@ -22,7 +23,7 @@ div[data-type='overlay']{
 		position:absolute;
 		padding:10%;
 
-		p{
+		& h1{
 			display:block;
 			position:absolute;
 			text-align:center;
@@ -168,6 +169,7 @@ div[data-overlay-type="blur"].active{
 	opacity:1;
 	display:block;
 	height:100%;
+	@include translate;
 	@include animation(blur-in,1s);
 }
 div[data-overlay-type="blur"].inactive{
@@ -175,6 +177,7 @@ div[data-overlay-type="blur"].inactive{
 	display:block;
 	height:100%;
 	pointer-events:none;
+	@include translate;
 	@include animation(blur-out,1s);
 }
 
@@ -182,10 +185,12 @@ div[data-overlay-type="blur"].inactive{
 @mixin blur-in(){
 	0%{
 		opacity:0;
+		@include translate;
 		@include blur(100px);
 	}
 	100%{
 		opacity:1;
+		@include translate;
 		@include blur(0);
 	}
 }
@@ -206,10 +211,12 @@ div[data-overlay-type="blur"].inactive{
 @mixin blur-out(){
 	0%{
 		opacity:1;
+		@include translate;
 		@include blur(0);
 	}
 	100%{
 		opacity:0;
+		@include translate;
 		@include blur(100px);
 	}
 }
@@ -225,4 +232,347 @@ div[data-overlay-type="blur"].inactive{
 }
 @keyframes blur-out{
 	@include blur-out;
+}
+
+//Rotate-y
+div[data-overlay-type="rotate"].active{
+	opacity:1;
+	display:block;
+	height:100%;
+	@include translate;
+	@include animation(rotate-in,1s);
+}
+div[data-overlay-type="rotate"].inactive{
+	opacity:0;
+	display:block;
+	height:100%;
+	pointer-events:none;
+	@include translate;
+	@include animation(rotate-out,1s);
+}
+
+//Rotate-y
+@mixin rotate-in(){
+	0%{
+		opacity:0;
+		@include translate;
+		@include rotate(180deg);
+	}
+	100%{
+		opacity:1;
+		@include translate;
+		@include rotate(0);
+	}
+}
+@-webkit-keyframes rotate-in{
+	@include rotate-in;
+}
+@-moz-keyframes rotate-in{
+	@include rotate-in;
+}
+@-o-keyframes rotate-in{
+	@include rotate-in;
+}
+@keyframes rotate-in{
+	@include rotate-in;
+}
+
+//Rotate-y
+@mixin rotate-out(){
+	0%{
+		opacity:1;
+		@include translate;
+		@include rotate(0);
+	}
+	100%{
+		opacity:0;
+		@include translate;
+		@include rotate(180deg);
+	}
+}
+
+@-webkit-keyframes rotate-out{
+	@include rotate-out;
+}
+@-moz-keyframes rotate-out{
+	@include rotate-out;
+}
+@-o-keyframes rotate-out{
+	@include rotate-out;
+}
+@keyframes rotate-out{
+	@include rotate-out;
+}
+
+//Rotate-x
+div[data-overlay-type="rotate-x"].active{
+	opacity:1;
+	display:block;
+	height:100%;
+	@include translate;
+	@include animation(rotate-x-in,1s);
+}
+div[data-overlay-type="rotate-x"].inactive{
+	opacity:0;
+	display:block;
+	height:100%;
+	pointer-events:none;
+	@include translate;
+	@include animation(rotate-x-out,1s);
+}
+
+//Rotate-x
+@mixin rotate-x-in(){
+	0%{
+		opacity:0;
+		@include translate;
+		@include rotateX(180deg);
+	}
+	100%{
+		opacity:1;
+		@include translate;
+		@include rotateX(0);
+	}
+}
+@-webkit-keyframes rotate-x-in{
+	@include rotate-x-in;
+}
+@-moz-keyframes rotate-x-in{
+	@include rotate-x-in;
+}
+@-o-keyframes rotate-x-in{
+	@include rotate-x-in;
+}
+@keyframes rotate-x-in{
+	@include rotate-x-in;
+}
+
+//Rotate-x
+@mixin rotate-x-out(){
+	0%{
+		opacity:1;
+		@include translate;
+		@include rotateX(0);
+	}
+	100%{
+		opacity:0;
+		@include translate;
+		@include rotateX(180deg);
+	}
+}
+
+@-webkit-keyframes rotate-x-out{
+	@include rotate-x-out;
+}
+@-moz-keyframes rotate-x-out{
+	@include rotate-x-out;
+}
+@-o-keyframes rotate-x-out{
+	@include rotate-x-out;
+}
+@keyframes rotate-x-out{
+	@include rotate-x-out;
+}
+
+
+//Rotate-y
+div[data-overlay-type="rotate-y"].active{
+	opacity:1;
+	display:block;
+	height:100%;
+	@include translate;
+	@include animation(rotate-y-in,1s);
+}
+div[data-overlay-type="rotate-y"].inactive{
+	opacity:0;
+	display:block;
+	height:100%;
+	pointer-events:none;
+	@include translate;
+	@include animation(rotate-y-out,1s);
+}
+
+//Rotate-y
+@mixin rotate-y-in(){
+	0%{
+		opacity:0;
+		@include translate;
+		@include rotateY(180deg);
+	}
+	100%{
+		opacity:1;
+		@include translate;
+		@include rotateY(0);
+	}
+}
+@-webkit-keyframes rotate-y-in{
+	@include rotate-y-in;
+}
+@-moz-keyframes rotate-x-in{
+	@include rotate-y-in;
+}
+@-o-keyframes rotate-y-in{
+	@include rotate-y-in;
+}
+@keyframes rotate-y-in{
+	@include rotate-y-in;
+}
+
+//Rotate-y
+@mixin rotate-y-out(){
+	0%{
+		opacity:1;
+		@include translate;
+		@include rotateY(0);
+	}
+	100%{
+		opacity:0;
+		@include translate;
+		@include rotateY(180deg);
+	}
+}
+
+@-webkit-keyframes rotate-y-out{
+	@include rotate-y-out;
+}
+@-moz-keyframes rotate-y-out{
+	@include rotate-y-out;
+}
+@-o-keyframes rotate-y-out{
+	@include rotate-y-out;
+}
+@keyframes rotate-y-out{
+	@include rotate-y-out;
+}
+
+//slide-y-top
+div[data-overlay-type="slide-y-top"].active{
+	opacity:1;
+	display:block;
+	height:100%;
+	@include translate;
+	@include animation(slide-y-in-top,1s);
+}
+div[data-overlay-type="slide-y-top"].inactive{
+	opacity:0;
+	display:block;
+	height:100%;
+	pointer-events:none;
+	@include translate;
+	@include animation(slide-y-out-top,1s);
+}
+
+//slide-y-in-top
+@mixin slide-y-in-top(){
+	0%{
+		opacity:0;
+		@include translateY(-100%);
+	}
+	100%{
+		opacity:1;
+		@include translateY(0);
+	}
+}
+@-webkit-keyframes slide-y-in-top{
+	@include slide-y-in-top;
+}
+@-moz-keyframes slide-y-in-top{
+	@include slide-y-in-top;
+}
+@-o-keyframes slide-y-in-top{
+	@include slide-y-in-top;
+}
+@keyframes slide-y-in-top{
+	@include slide-y-in-top;
+}
+
+//slide-y-out-top
+@mixin slide-y-out-top(){
+	0%{
+		opacity:1;
+		@include translateY(0);
+	}
+	100%{
+		opacity:0;
+		@include translateY(-100%);
+	}
+}
+
+@-webkit-keyframes slide-y-out-top{
+	@include slide-y-out-top;
+}
+@-moz-keyframes slide-y-out-top{
+	@include slide-y-out-top;
+}
+@-o-keyframes slide-y-out-top{
+	@include slide-y-out-top;
+}
+@keyframes slide-y-out-top{
+	@include slide-y-out-top;
+}
+
+//slide-y-bottom
+div[data-overlay-type="slide-y-bottom"].active{
+	opacity:1;
+	display:block;
+	height:100%;
+	@include translate;
+	@include animation(slide-y-in-bottom,1s);
+}
+div[data-overlay-type="slide-y-bottom"].inactive{
+	opacity:0;
+	display:block;
+	height:100%;
+	pointer-events:none;
+	@include translate;
+	@include animation(slide-y-out-bottom,1s);
+}
+
+//slide-y-in-top
+@mixin slide-y-in-bottom(){
+	0%{
+		opacity:0;
+		@include translateY(100%);
+	}
+	100%{
+		opacity:1;
+		@include translateY(0);
+	}
+}
+@-webkit-keyframes slide-y-in-bottom{
+	@include slide-y-in-bottom;
+}
+@-moz-keyframes slide-y-in-bottom{
+	@include slide-y-in-bottom;
+}
+@-o-keyframes slide-y-in-bottom{
+	@include slide-y-in-bottom;
+}
+@keyframes slide-y-in-bottom{
+	@include slide-y-in-bottom;
+}
+
+//slide-y-out-bottom
+@mixin slide-y-out-bottom(){
+	0%{
+		opacity:1;
+		@include translateY(0);
+	}
+	100%{
+		opacity:0;
+		@include translateY(100%);
+	}
+}
+
+@-webkit-keyframes slide-y-out-bottom{
+	@include slide-y-out-bottom;
+}
+@-moz-keyframes slide-y-out-bottom{
+	@include slide-y-out-bottom;
+}
+@-o-keyframes slide-y-out-bottom{
+	@include slide-y-out-bottom;
+}
+@keyframes slide-y-out-bottom{
+	@include slide-y-out-bottom;
 }

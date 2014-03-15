@@ -63,20 +63,15 @@
 		}
 		& .slideshow-left{
 			left:-15px;
-			border-left:25px solid transparent;
-			border-top:25px solid transparent;
-			border-right:25px solid #ccc;
-			border-bottom:25px solid transparent;
+			@include triangle($right:#ccc);
+
 			&:hover{
 				border-right:25px solid #222;
 			}
 		}
 		& .slideshow-right{
 			right:-15px;
-			border-left:25px solid #ccc;
-			border-top:25px solid transparent;
-			border-right:25px solid transparent;
-			border-bottom:25px solid transparent;
+			@include triangle($left:#ccc);
 
 			&:hover{
 				border-left:25px solid #222;
@@ -91,14 +86,23 @@
 		float: left;
 		list-style-type: none;
 		position:relative;
-		height: 15px;
-		background-color: #ccc;
+		height: 10px;
+		background-color: pink;
 		cursor:pointer;
-		@include inset-box-shadow(0,0,10px,0,#000);
 		
+		&::before{
+			content:'';
+			display:block;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			margin:0 -1px;
+			border-right:1px solid #000;
+		}
 		&:hover{
-			background-color: #222;
-			@include inset-box-shadow(0,0,10px,0,#000)
+			background-color: #ccc;
 		}
 
 		&.active{

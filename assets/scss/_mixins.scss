@@ -64,11 +64,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
 	transform:translate($x);
 }
 
+@mixin translateX($x:0){
+	-webkit-transform:translateX($x);
+	-moz-transform:translateX($x);
+	-o-transform:translateX($x);
+	transform:translateX($x);
+}
+
+@mixin translateY($y:0){
+	-webkit-transform:translateY($y);
+	-moz-transform:translateY($y);
+	-o-transform:translateY($y);
+	transform:translateY($y);
+}
+
 @mixin scale($x:0){
 	-webkit-transform:scale($x);
 	-moz-transform:scale($x);
 	-o-transform:scale($x);
 	transform:scale($x);
+}
+@mixin rotate($x:0){
+	-webkit-transform:rotate($x);
+	-moz-transform:rotate($x);
+	-o-transform:rotate($x);
+	transform:rotate($x);
+}
+@mixin rotateX($x:0){
+	-webkit-transform:rotateX($x);
+	-moz-transform:rotateX($x);
+	-o-transform:rotateX($x);
+	transform:rotateX($x);
+}
+
+@mixin rotateY($x:0){
+	-webkit-transform:rotateY($x);
+	-moz-transform:rotateY($x);
+	-o-transform:rotateY($x);
+	transform:rotateY($x);
 }
 
 @mixin blur($x:0){
@@ -78,3 +111,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
 	filter:blur($x);
 }
 
+@mixin triangle($width:25px,$top:transparent,$right:transparent,$bottom:transparent,$left:transparent){
+	border-top:$width solid $top;
+	border-right:$width solid $right;
+	border-bottom:$width solid $bottom;
+	border-left:$width solid $left;
+}
+
+@mixin aspect-ratio($ratio){
+	&::before{
+		content:'';
+		display:block;
+		padding-bottom:($ratio);
+	}
+	& .inner{
+		position:absolute;
+		top:0;
+		width:100%;
+		height:100%;
+		overflow:hidden;
+	}
+}
