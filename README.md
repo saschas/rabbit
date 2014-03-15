@@ -2,6 +2,23 @@ rabbit
 ======
 A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Module tries to be independent as possible but requires jQuery and Modernizr.
 
+
+---
+
+#### Grid
+
+A little grid system starts with col- and than just 1-2 (1/2) and so on
+
+```
+<div class="box col-1-2">
+    <div class="inner">
+      <img src="img1.jpg">
+      <p>text</p>
+    </div>
+  </div>
+```
+
+
 ---
 
 #### simple slideshow
@@ -12,7 +29,6 @@ A little Sandbox — Playground to test little Snippets, Grid, Modules. Each Mod
   <li><img src="bild-1.jpg" alt="bild"/></li>
   <li><img src="bild-1.jpg" alt="bild"/></li>
 </ul>
-
 ```
 
 ```javascript
@@ -50,11 +66,26 @@ use *data-button-style* for buttons
 
 ---
 
+#### Aspect Ratio
+
+Divs keep aspect ratio
+data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
+
+```
+<div data-ratio="1-1" data-type="aspect-ratio">
+    <div class="inner">
+      <p>1-1 Aspect Ratio</p>
+    </div>
+  </div>
+```
+
+---
+
 ### ToDos
 - documentation
 - Files that are used
 
-
-| Method | todo | description |
-| slideshow | loop through left |  |
-| slideshow | caption | add option caption(bool) |
+| Method        | todo         | description |
+| ------------- |:------------:| :-------|
+| **slideshow** | loop through left |   |
+| **slideshow** | caption      | add option caption(bool) |
