@@ -70,6 +70,15 @@ rabbit.slideshow($options);
 use *data-button-style* for buttons
 *data-overlay-type* for the overlay itself
 
+```
+<button data-button-style="simple" data-button="overlay">simple</button>
+<div data-overlay-type="simple" data-type="overlay" class="active">
+	<div class="inner">
+		<h1>simple</h1>
+	</div>
+</div>
+```
+
 | data-overlay-type | description |
 | --- | --- |
 | simple overlay | simple fades in and out |
