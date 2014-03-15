@@ -108,3 +108,4 @@ data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
 | **slideshow** | loop through left |   |
 | **slideshow** | caption      | add option caption(bool) |
 | **testing** | test in all major browsers      |  |
+| **files** | list all files you need to reach effect     |  |
