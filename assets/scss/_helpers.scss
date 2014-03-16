@@ -1,13 +1,106 @@
+#header {
+width: 100%;
+height:30%;
+min-height:300px;
+max-height:500px;
+background: #ccc;
+margin:auto;
+/*
+background-image:url(../img/header.jpg);
+background-size:center center;
+background-size:cover;
+*/
+position:relative;
+
+	& .inner{
+		width:90%;
+		max-width:1280px;
+		height:100%;
+		position:absolute;
+		left:0;
+		right:0;
+		margin:auto;
+		border-left:1px solid pink;
+		border-right:1px solid pink;
+		background-image:linear-gradient(45deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,.2) 10%,rgba(0,0,0,.35) 30%, rgba(0,0,0,.1) 100%);
+
+		& .info{
+			width:90%;
+			height:40%;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			text-align:center;
+			padding:50px 20px;
+			width:350px;
+			max-width:1280px;
+			position:absolute;
+			margin:auto;
+			border-radius:5px;
+			background-color:#fff;
+
+			&::after{
+				content: '';
+				display: block;
+				width: 80px;
+				height: 50px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+				top: -30px;
+				background-image: url(../img/hase.png);
+				background-size: 50px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-color: #fff;
+				padding: 10px;
+				border-radius: 50%;
+			}
+		}
+	}
+}
 #main-wrapper {
 	width: 90%;
-	min-height: 100%;
+	min-height: 70%;
 	position: absolute;
 	margin: auto;
-	padding: 50px 0;
+	max-width:1280px;
 	left: 0;
 	right: 0;
 	border-left: 1px solid pink;
 	border-right: 1px solid pink;
+}
+a[title='github']{
+	position:absolute;
+	display:inline-block;
+	width:160px;
+	text-indent:40px;
+	bottom:5px;
+	left:0;
+	right:0;
+	margin:auto;
+	color:#222;
+	text-decoration:none;
+	line-height:35px;
+	&::before {
+		content: '';
+		display: block;
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url(../img/github.png);
+		background-size: 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	&:hover{
+		text-decoration:underline;
+	}
 }
 .description{
 	width:100%;
@@ -49,7 +142,7 @@
 			padding: 5px;
 			right: 5px;
 			top:8px;
-			background: #222;
+			background: #333;
 			color: #fff;
 			border-radius: 3px;
 			cursor: pointer;
