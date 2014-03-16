@@ -1,0 +1,35 @@
+div[data-bg-style]{
+    width: 250px;
+    margin:10px;
+    position:relative;
+    float:left;
+  
+  & .inner{
+    position:relative;
+    float:left;
+    @include animation(opacity,2s);
+    @include clearfix;
+  }
+   @include clearfix;
+}
+@mixin opacity(){
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes opacity{
+ @include opacity;
+}
+@-moz-keyframes opacity{
+ @include opacity;
+}
+@-o-keyframes opacity{
+ @include opacity;
+}
+@keyframes opacity{
+ @include opacity;
+}

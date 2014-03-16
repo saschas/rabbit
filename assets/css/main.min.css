@@ -14,7 +14,7 @@ html, body {
 .box {
   float: left; }
   .box .inner {
-    margin: 5px;
+    margin: 0 5px 5px 0;
     padding: 5px;
     background: #fff; }
     .box .inner::after {
@@ -1858,6 +1858,55 @@ div[data-type='aspect-ratio'] {
     width: 100%;
     height: 100%;
     overflow: hidden; }
+
+div[data-bg-style] {
+  width: 250px;
+  margin: 10px;
+  position: relative;
+  float: left; }
+  div[data-bg-style] .inner {
+    position: relative;
+    float: left;
+    -webkit-animation: opacity 2s;
+    -moz-animation: opacity 2s;
+    -o-animation: opacity 2s;
+    animation: opacity 2s; }
+    div[data-bg-style] .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+  div[data-bg-style]::after {
+    content: '';
+    display: block;
+    clear: both; }
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes opacity {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
 
 #main-wrapper {
   width: 90%;

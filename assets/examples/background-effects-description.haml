@@ -1,0 +1,19 @@
+.description
+	.title 
+		%h2 Background Effects
+	.inner
+		%h1 Background-effects
+		%p call your data-bg-style whatever you want and init it with
+		%pre 
+			%code
+				= preserve do
+					:escaped
+						new BG({
+						    element : 'round',
+						    col:4,
+						    offset:'1',
+						    bubble:false,
+						    image:'assets/img/lorempixum2.jpg'
+						  });
+						.rabbit-bg{:'data-bg-style'=>'simple'}
+		%span.more view example

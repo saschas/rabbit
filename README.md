@@ -105,6 +105,30 @@ data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
     </div>
   </div>
 ```
+---
+
+#### Background Effects
+tiles your background 
+*data-background-style* for the overlay itself
+
+```html
+var $options = {
+      element : 'round',
+      col:4,
+      offset:'1',
+      bubble:false,
+      image:'assets/img/lorempixum2.jpg'
+    }
+new rabbitBG($options);
+```
+
+| options | default | description |
+| --- | --- | --- |
+| element | *-* | element which has the data-background-style attribute (you can call it whatever you want) |
+| col | *10* | number of columns ( number of row is equal to the number of columns. TODO: individual col and row) |
+| offset | *1* | margin between the tiles |
+| bubble | *false* | round corners true/false, default is false |
+| image | *-* | simple rotates-x in and out |
 
 ---
 
@@ -112,9 +136,10 @@ data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
 - documentation
 - Files that are used
 
-| Method        | todo         | description |
+| Name        | todo         | description |
 | ------------- |:------------:| :-------|
 | **slideshow** | loop through left |   |
 | **slideshow** | caption      | add option caption(bool) |
 | **testing** | test in all major browsers      |  |
 | **files** | list all files you need to reach effect     |  |
+| **Background Effects** | individual col and row     |  |

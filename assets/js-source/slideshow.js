@@ -68,7 +68,6 @@ slideshow = function($array){
 		var slideAnzahl = $('.slideshow li').length;
 		var paginationHolder = document.createElement('ul');
 
-			console.log($array.width)
 			if($array.width){
 				paginationHolder.style.width = $array.width + '%';
 			}
