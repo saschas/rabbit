@@ -1,19 +1,20 @@
 .description
 	.title 
-		%h2 Background Effects
+		%h2 Background Tiles
 	.inner
-		%h1 Background-effects
+		%h1 Background Tiles
 		%p call your data-bg-style whatever you want and init it with
 		%pre 
 			%code
 				= preserve do
 					:escaped
-						new BG({
-						    element : 'round',
-						    col:4,
+						$options = {
+						    element : 'round', // default:false
+						    col:4, //default:10
 						    offset:'1',
 						    bubble:false,
 						    image:'assets/img/lorempixum2.jpg'
-						  });
+						  }
+						new BG($options);
 						.rabbit-bg{:'data-bg-style'=>'simple'}
 		%span.more view example

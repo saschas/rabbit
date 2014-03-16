@@ -9,6 +9,7 @@ A little Sandbox — Playground to test snippets, grids or modules. Each Module 
 - [slideshow](#simple-slideshow)
 - [overlays](#overlays)
 - [aspect ratio](#aspect-ratio)
+- [Background Tiles](#background-tiles)
 - [todos](#todos)
 
 
@@ -107,7 +108,7 @@ data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
 ```
 ---
 
-#### Background Effects
+#### Background Tiles
 tiles your background 
 *data-background-style* for the overlay itself
 
@@ -128,7 +129,7 @@ new rabbitBG($options);
 | col | *10* | number of columns ( number of row is equal to the number of columns. TODO: individual col and row) |
 | offset | *1* | margin between the tiles |
 | bubble | *false* | round corners true/false, default is false |
-| image | *-* | simple rotates-x in and out |
+| image | *-* | set your image path |
 
 ---
 

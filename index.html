@@ -8,7 +8,7 @@
 <!--Scripts-->
 <script src='assets/js/slideshow.min.js' type='text/javascript'></script>
 <script src='assets/js/overlay.min.js' type='text/javascript'></script>
-<script src='assets/js/background-effects.min.js' type='text/javascript'></script>
+<script src='assets/js/background-tiles.min.js' type='text/javascript'></script>
 <script src='assets/js/main.min.js' type='text/javascript'></script>
 <div id="main-wrapper">
 	<div id="grid">
@@ -327,15 +327,15 @@
   </div>
 </div>
 	</div>
-	<div id="background-effects" class="open">
+	<div id="background-tiles" class="open">
 		<div class='description'>
   <div class='title'>
-    <h2>Background Effects</h2>
+    <h2>Background Tiles</h2>
   </div>
   <div class='inner'>
-    <h1>Background-effects</h1>
+    <h1>Background Tiles</h1>
     <p>call your data-bg-style whatever you want and init it with</p>
-    <pre><code>new BG({&#x000A;    element : 'round',&#x000A;    col:4,&#x000A;    offset:'1',&#x000A;    bubble:false,&#x000A;    image:'assets/img/lorempixum2.jpg'&#x000A;  });&#x000A;.rabbit-bg{:'data-bg-style'=&gt;'simple'}</code></pre>
+    <pre><code>$options = {&#x000A;    element : 'round', // default:false&#x000A;    col:4, //default:10&#x000A;    offset:'1',&#x000A;    bubble:false,&#x000A;    image:'assets/img/lorempixum2.jpg'&#x000A;  }&#x000A;new BG($options);&#x000A;.rabbit-bg{:'data-bg-style'=&gt;'simple'}</code></pre>
     <span class='more'>view example</span>
   </div>
 </div>
