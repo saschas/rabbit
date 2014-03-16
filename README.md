@@ -2,7 +2,7 @@ rabbit
 ======
 A little Sandbox — Playground to test snippets, grids or modules. Each Module tries to be as independent as possible but requires at least jQuery. 
 
-[Demo page!](http://rabbit.holy-crab.de/)
+You can find some examples on the [demo page](http://rabbit.holy-crab.de/)
 
 ---
 
