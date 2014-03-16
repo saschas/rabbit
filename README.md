@@ -1,32 +1,21 @@
-rabbit
+![alt text](assets/img/hase-ico.png "rabbit") rabbit
 ======
-A little Sandbox — Playground to test snippets, grids or modules. Each Module tries to be as independent as possible but requires at least jQuery. 
-
-You can find some examples on the [demo page](http://rabbit.holy-crab.de/)
+A little Sandbox — Playground to test snippets, grids or modules. Each Module tries to be as independent as possible but requires at least jQuery. You can find some examples on the [demo page.](http://rabbit.holy-crab.de/)
 
 ---
 
-- [grid](#grid)
-- [slideshow](#simple-slideshow)
-- [overlays](#overlays)
-- [aspect ratio](#aspect-ratio)
-- [Background Tiles](#background-tiles)
-- [todos](#todos)
-
+- [grid](#grid) *a simple grid system*
+- [slideshow](#simple-slideshow) *a simple slideshow based on an unordered list*
+- [overlays](#overlays) *different overlays*
+- [aspect ratio](#aspect-ratio) *div's that keep their aspect ratio*
+- [Background Tiles](#background-tiles) *tiles your background images*
+- [todos](#todos) 
 
 ---
 #### Grid
 
 A little grid system starts with col- and than just 1-2 (1/2) and so on
 
-```html
-<div class="box col-1-2">
-    <div class="inner">
-      <img src="img1.jpg">
-      <p>text</p>
-    </div>
-  </div>
-```
 | classname | width |
 | --- | --- |
 | .col-1-1 | 1 / 1 |
@@ -34,25 +23,49 @@ A little grid system starts with col- and than just 1-2 (1/2) and so on
 | .col-1-3 | 1 / 3 |
 | .col-1-4 | 1 / 4 |
 
+```haml
+<!--haml-->
+
+.box col-1-2
+  .inner
+    %img{:src=>"img1.jpg", :alt =>'img 1'}
+    %p text
+
+.box col-1-2
+  .box.col-1-2
+    .inner
+  .box.col-1-2
+    .inner
+```
+
 ---
 
 #### simple slideshow
 
-```html
-<ul class="slideshow">
-  <li><img src="bild-1.jpg" alt="bild"/></li>
-  <li><img src="bild-1.jpg" alt="bild"/></li>
-  <li><img src="bild-1.jpg" alt="bild"/></li>
-</ul>
+```haml
+<!--haml-->
+
+%ul.slideshow
+  %li
+    %img{:src=>"bild-1.jpg",:alt=>"bild"
+  %li
+    %img{:src=>"bild-1.jpg",:alt=>"bild"
+  %li
+    %img{:src=>"bild-1.jpg",:alt=>"bild"
+  %li
+    %img{:src=>"bild-1.jpg",:alt=>"bild"
 ```
 
 ```javascript
+/*js*/
+
 var $options = {
-  		'pagination':true,
-  		'loop':true,
-  		'height':300,
-  		'width':100
-  	}
+  'pagination':true,
+  'loop':true,
+  'height':300,
+  'width':100
+}
+
 //init with
 rabbit.slideshow($options);
 ```
@@ -72,13 +85,14 @@ rabbit.slideshow($options);
 - use *data-button-style* for buttons
 - *data-overlay-type* for the overlay itself
 
-```html
-<button data-button-style="simple" data-button="overlay">simple</button>
-<div data-overlay-type="simple" data-type="overlay" class="active">
-	<div class="inner">
-		<h1>simple</h1>
-	</div>
-</div>
+```haml
+<!--haml-->
+
+%button{:'data-button-style'=>"simple",:'data-button'=>"overlay"}
+  simple
+.active{:'data-overlay-type'=>"simple",:'data-type'=>"overlay"
+  .inner
+		%h1 simple
 ```
 
 | data-overlay-type | description |
@@ -100,12 +114,12 @@ rabbit.slideshow($options);
 - Divs keep aspect ratio
 - data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
 
-```html
-<div data-ratio="1-1" data-type="aspect-ratio">
-    <div class="inner">
-      <p>1-1 Aspect Ratio</p>
-    </div>
-  </div>
+```haml
+<!--haml-->
+
+%div{:'data-ratio'=>"1-1", :data-type=>"aspect-ratio"
+  .inner
+    %p 1-1 Aspect Ratio
 ```
 ---
 
@@ -113,19 +127,23 @@ rabbit.slideshow($options);
 - tiles your background 
 - *data-background-style* for the overlay itself
 
-```html
+```js
+/*js*/
+
 var $options = {
-      element : 'round',
-      col:4,
-      offset:'1',
-      bubble:false,
-      image:'assets/img/lorempixum2.jpg'
-    }
+  element : 'round',
+  col:4,
+  offset:'1',
+  bubble:false,
+  image:'assets/img/lorempixum2.jpg'
+}
+
+/*init with rabbitBG*/
 new rabbitBG($options);
 ```
 
 | options | default | description |
-| --- | --- | --- |
+| --- | :---: | --- |
 | element | *-* | element which has the data-background-style attribute (you can call it whatever you want) |
 | col | *10* | number of columns ( number of row is equal to the number of columns. TODO: individual col and row) |
 | offset | *1* | margin between the tiles |
@@ -139,7 +157,7 @@ new rabbitBG($options);
 - Files that are used
 
 | Name        | todo         | description |
-| ------------- |:------------:| :-------|
+| ------------- |:------------| :-------|
 | **slideshow** | loop through left |   |
 | **slideshow** | caption      | add option caption(bool) |
 | **testing** | test in all major browsers      |  |
