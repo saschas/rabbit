@@ -68,8 +68,8 @@ rabbit.slideshow($options);
 ---
 
 #### overlays
-use *data-button-style* for buttons
-*data-overlay-type* for the overlay itself
+- use *data-button-style* for buttons
+- *data-overlay-type* for the overlay itself
 
 ```html
 <button data-button-style="simple" data-button="overlay">simple</button>
@@ -96,8 +96,8 @@ use *data-button-style* for buttons
 
 #### Aspect Ratio
 
-Divs keep aspect ratio
-data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
+- Divs keep aspect ratio
+- data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
 
 ```html
 <div data-ratio="1-1" data-type="aspect-ratio">
@@ -109,8 +109,8 @@ data-type *aspect-ratio* and data-ratio describes the ratio e.g. '1-1'
 ---
 
 #### Background Tiles
-tiles your background 
-*data-background-style* for the overlay itself
+- tiles your background 
+- *data-background-style* for the overlay itself
 
 ```html
 var $options = {
