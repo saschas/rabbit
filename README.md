@@ -47,13 +47,13 @@ A little grid system starts with col- and than just 1-2 (1/2) and so on
 
 %ul.slideshow
   %li
-    %img{:src=>"bild-1.jpg",:alt=>"bild"
+    %img{:src=>"bild-1.jpg",:alt=>"bild"}
   %li
-    %img{:src=>"bild-1.jpg",:alt=>"bild"
+    %img{:src=>"bild-1.jpg",:alt=>"bild"}
   %li
-    %img{:src=>"bild-1.jpg",:alt=>"bild"
+    %img{:src=>"bild-1.jpg",:alt=>"bild"}
   %li
-    %img{:src=>"bild-1.jpg",:alt=>"bild"
+    %img{:src=>"bild-1.jpg",:alt=>"bild"}
 ```
 
 ```javascript
@@ -90,7 +90,7 @@ rabbit.slideshow($options);
 
 %button{:'data-button-style'=>"simple",:'data-button'=>"overlay"}
   simple
-.active{:'data-overlay-type'=>"simple",:'data-type'=>"overlay"
+.active{:'data-overlay-type'=>"simple",:'data-type'=>"overlay"}
   .inner
 		%h1 simple
 ```
@@ -117,7 +117,7 @@ rabbit.slideshow($options);
 ```haml
 <!--haml-->
 
-%div{:'data-ratio'=>"1-1", :data-type=>"aspect-ratio"
+%div{:'data-ratio'=>"1-1", :'data-type'=>"aspect-ratio"}
   .inner
     %p 1-1 Aspect Ratio
 ```
@@ -131,30 +131,30 @@ rabbit.slideshow($options);
 /*js*/
 
 var $options = {
-  element : 'round',
-  col:4,
-  offset:'1',
-  bubble:false,
-  image:'assets/img/lorempixum2.jpg'
-}
+    style : 'cube',
+    identifier:4,
+    col:2,
+    offset:.8,
+    image:'assets/img/lorempixum2.jpg'
+  };
 
-/*init with rabbitBG*/
-new rabbitBG($options);
+
+  rabbit.bg($options);
 ```
 
 | options | default | description |
-| --- | :---: | --- |
-| element | *-* | element which has the data-background-style attribute (you can call it whatever you want) |
+| --- | :---: | :--- |
+| style | *simple* | simple,cube |
+| identifier | *-* | ID |
 | col | *10* | number of columns ( number of row is equal to the number of columns. TODO: individual col and row) |
 | offset | *1* | margin between the tiles |
-| bubble | *false* | round corners true/false, default is false |
 | image | *-* | set your image path |
 
 ---
 
 ### ToDos
 - documentation
-- Files that are used
+- browser testing
 
 | Name        | todo         | description |
 | ------------- |:------------| :-------|

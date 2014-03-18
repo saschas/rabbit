@@ -8,13 +8,22 @@
 			%code
 				= preserve do
 					:escaped
-						$options = {
-						    element : 'round', // default:false
-						    col:4, //default:10
-						    offset:'1',
-						    bubble:false,
-						    image:'assets/img/lorempixum2.jpg'
-						  }
+						/*js*/
+						var $bg1 = {
+							style : 'simple',
+							identifier:1,
+							col:20,
+							offset:'.4',
+							image:'assets/img/lorempixum2.jpg'
+						}
 						new rabbitBG($options);
+
+		%pre 
+			%code
+				= preserve do
+					:escaped
+						<!-- haml -->
+						
 						.rabbit-bg{:'data-bg-style'=>'simple'}
-		%span.more view example
+		
+		%a.more{:href => '#background-tiles'} view example

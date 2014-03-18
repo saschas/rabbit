@@ -1,13 +1,37 @@
+#aspect-ratio > div.preview {
+	@include column(5);
+	@include column-gap(5px);
+}
+
 div[data-type='aspect-ratio']{
-	width:15%;
-	margin:0 5px 5px 0;
-	background:#ccc;
+	@include column-break;
+	width:100%;
+	margin:5px 2.5% 0;
+	
 	position:relative;
 	float:left;
 	
-	& .inner{
+	&.small{
 
+		width:45%;
+		float:left;
 		
+		@include clearfix;
+
+		&::last-child{
+			margin-right:0;
+		}
+	}
+	& .inner{
+		background:#ccc;
+		top: 0;
+		width: 90%;
+		height: 90%;
+		overflow: hidden;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
 	}
 
 	& p{

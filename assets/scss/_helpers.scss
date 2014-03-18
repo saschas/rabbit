@@ -138,7 +138,16 @@ a[title='github']{
 			margin: 10px 0;
 		}
 
-		& span.more {
+		& code {
+			box-shadow: inset 0 0 3px 0 #ccc;
+			border-radius: 4px;
+			padding: 10px 30px;
+			line-height: 20px;
+			font-size: 1.15em;
+		}
+
+		& a.more {
+			text-decoration:none;
 			position: absolute;
 			padding: 5px;
 			right: 5px;
@@ -173,8 +182,11 @@ a[title='github']{
 	display:none;
 	@include duration(1s);
 	@include clearfix;
-	@include inset-box-shadow(0,0,15px,0,#000);
-	background: #999;
+	transition-duration: 1s;
+	position: relative;
+	background: rgba(240,240,240,0.1);
+	@include inset-box-shadow($feather:3px, $color:#666);
+	@include border-radius(3px);
 	padding: 20px;
 }
 #main-wrapper .open{

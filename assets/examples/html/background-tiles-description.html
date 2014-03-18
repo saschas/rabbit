@@ -5,7 +5,8 @@
   <div class='inner'>
     <h1>Background Tiles</h1>
     <p>call your data-bg-style whatever you want and init it with</p>
-    <pre><code>$options = {&#x000A;    element : 'round', // default:false&#x000A;    col:4, //default:10&#x000A;    offset:'1',&#x000A;    bubble:false,&#x000A;    image:'assets/img/lorempixum2.jpg'&#x000A;  }&#x000A;new rabbitBG($options);&#x000A;.rabbit-bg{:'data-bg-style'=&gt;'simple'}</code></pre>
-    <span class='more'>view example</span>
+    <pre><code>/*js*/&#x000A;var $bg1 = {&#x000A;	style : 'simple',&#x000A;	identifier:1,&#x000A;	col:20,&#x000A;	offset:'.4',&#x000A;	image:'assets/img/lorempixum2.jpg'&#x000A;}&#x000A;new rabbitBG($options);</code></pre>
+    <pre><code>&lt;!-- haml --&gt;&#x000A;&#x000A;.rabbit-bg{:'data-bg-style'=&gt;'simple'}</code></pre>
+    <a class='more' href='#background-tiles'>view example</a>
   </div>
 </div>

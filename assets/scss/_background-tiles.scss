@@ -1,18 +1,21 @@
 div[data-bg-style]{
-    width: 250px;
-    margin:10px;
+    width: 180px;
+    margin: 5px;
     position:relative;
     float:left;
   
   & .inner{
     position:relative;
     float:left;
-    @include animation(opacity,2s);
+    //@include animation(opacity,2s);
     @include clearfix;
   }
    @include clearfix;
 }
-@mixin opacity(){
+
+
+//Data BG Style
+@mixin simple(){
   0%{
     opacity:0;
   }
@@ -21,15 +24,106 @@ div[data-bg-style]{
   }
 }
 
-@-webkit-keyframes opacity{
- @include opacity;
+$child: 50;
+@for $i from 1 through $child {
+  .rabbit-bg[data-bg-style='simple'] .inner:nth-child(#{$i}) {
+    @include animation(simple#{$i}, $i*.15s);
+  }
+  @-webkit-keyframes simple#{$i}{
+   @include simple;
+  }
+  @-moz-keyframes simple#{$i}{
+   @include simple;
+  }
+  @-o-keyframes simple#{$i}{
+   @include simple;
+  }
+  @keyframes simple#{$i}{
+   @include simple;
+  }
 }
-@-moz-keyframes opacity{
- @include opacity;
+
+//Data BG rotate
+@mixin rotateMixin(){
+  0%{
+    opacity:0;
+    @include translateX(100%);
+    @include rotate(90deg);
+  }
+  100%{
+    opacity:1;
+    @include translateX(0);
+    @include rotate(0);
+  }
 }
-@-o-keyframes opacity{
- @include opacity;
+
+$child: 50;
+@for $i from 1 through $child {
+  .rabbit-bg[data-bg-style='rotate'] .inner:nth-child(#{$i}) {
+    @include animation(rotate#{$i}, $i*.05s);
+  }
+  @-webkit-keyframes rotate#{$i}{
+   @include rotateMixin;
+  }
+  @-moz-keyframes rotate#{$i}{
+   @include rotateMixin;
+  }
+  @-o-keyframes rotate#{$i}{
+   @include rotateMixin;
+  }
+  @keyframes rotate#{$i}{
+   @include rotateMixin;
+  }
 }
-@keyframes opacity{
- @include opacity;
+
+
+//Data BG cube
+
+div[data-bg-style='cube'] .inner{
+  &::after{
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:#eee;
+    @include rotateX(90deg);
+    @include transform-origin(left);
+  }
 }
+@mixin cubeMixin(){
+  0%{
+    opacity:0;
+    @include translateX(100%);
+    @include rotate(90deg);
+  }
+  100%{
+    opacity:1;
+    @include translateX(0);
+    @include rotate(0);
+  }
+}
+
+$child: 500;
+@for $i from 1 through $child {
+  .rabbit-bg[data-bg-style='cube'] .inner:nth-child(#{$i}) {
+    @include animation(cube#{$i}, $i*.05s);
+  }
+  @-webkit-keyframes cube#{$i}{
+   @include cubeMixin;
+  }
+  @-moz-keyframes cube#{$i}{
+   @include cubeMixin;
+  }
+  @-o-keyframes rotate#{$i}{
+   @include cubeMixin;
+  }
+  @keyframes rotate#{$i}{
+   @include cubeMixin;
+  }
+}
+
+
+

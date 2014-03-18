@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <meta chatset='utf-8' lang='de'>
 <title>rabbit</title>
-<link href='http://yandex.st/highlightjs/8.0/styles/default.min.css' rel='stylesheet' type='text/css'>
 <link href='assets/css/main.min.css' rel='stylesheet' type='text/css'>
 <script src='assets/js/jquery-modernizr.min.js' type='text/javascript'></script>
+<script src='assets/js/jquery.address-1.5.min.js' type='text/javascript'></script>
 <!--Scripts-->
 <script src='assets/js/slideshow.min.js' type='text/javascript'></script>
 <script src='assets/js/overlay.min.js' type='text/javascript'></script>
@@ -30,7 +30,7 @@
     <h1>Basic Grid</h1>
     <p>Just another little grid system. You can use it by giving the box a class with</p>
     <pre><code>.col-1-1 -&gt; (1/1)&#x000A;.col-1-2 -&gt; (1/2) and so on.</code></pre>
-    <span class='more'>view example</span>
+    <a class='more' href='#grid'>view example</a>
   </div>
 </div>
 		<div class='preview'>
@@ -175,7 +175,7 @@
     <p>Just another very simple slideshow.</p>
     <pre><code>&lt;!--basic markup--&gt;&#x000A;&lt;ul class=&quot;slideshow&quot;&gt;&#x000A;  &lt;li&gt;&lt;img src=&quot;bild-1.jpg&quot; alt=&quot;bild&quot;/&gt;&lt;/li&gt;&#x000A;  &lt;li&gt;&lt;img src=&quot;bild-1.jpg&quot; alt=&quot;bild&quot;/&gt;&lt;/li&gt;&#x000A;  &lt;li&gt;&lt;img src=&quot;bild-1.jpg&quot; alt=&quot;bild&quot;/&gt;&lt;/li&gt;&#x000A;&lt;/ul&gt;</code></pre>
     <pre><code>&lt;script&gt;&#x000A;  //initialize the slideshow&#x000A;  var $options = {&#x000A;  		'pagination':true, //default true&#x000A;  		'loop':true, //known issue: only if you slide right&#x000A;  		'height':300,	//in px - default 300px&#x000A;  		'width':100,	//in % - default 100%&#x000A;  	}&#x000A;  //init with arguments&#x000A;  rabbit.slideshow($options);&#x000A;&lt;/script&gt;</code></pre>
-    <span class='more'>view example</span>
+    <a class='more' href='#slideshow'>view example</a>
   </div>
 </div>
 		<div class='preview'>
@@ -204,7 +204,7 @@
   </ul>
 </div>
 	</div>
-	<div id="overlay">
+	<div id="overlays">
 		<div class='description'>
   <div class='title'>
     <h2>Overlays</h2>
@@ -213,7 +213,7 @@
     <h1>Overlays</h1>
     <p>A few overlays.</p>
     <pre><code>&lt;!--basic markup--&gt;&#x000A;&lt;button data-button-style=&quot;simple&quot; data-button=&quot;overlay&quot;&gt;Simple Overlay&lt;/button&gt;&#x000A;&lt;div data-overlay-type=&quot;simple&quot; data-type=&quot;overlay&quot;&gt;&#x000A;	&lt;div class=&quot;inner&quot;&gt;&#x000A;		&lt;p&gt;Simple Overlay&lt;/p&gt;&#x000A;	&lt;/div&gt;&#x000A;&lt;/div&gt;</code></pre>
-    <span class='more'>view example</span>
+    <a class='more' href='#overlays'>view example</a>
   </div>
 </div>
 		<div class='preview'>
@@ -300,14 +300,24 @@
     <h1>Aspect Ratio</h1>
     <p>All boxes keep aspect ratio</p>
     <pre><code>&lt;!--basic markup--&gt;&#x000A;&lt;div data-ratio=&quot;1-1&quot; data-type=&quot;aspect-ratio&quot;&gt;&#x000A;	&lt;div class=&quot;inner&quot;&gt;&#x000A;		&lt;p&gt;1-1 Aspect Ratio&lt;/p&gt;&#x000A;	&lt;/div&gt;&#x000A;&lt;/div&gt;</code></pre>
-    <span class='more'>view example</span>
+    <a class='more' href='#aspect-ratio'>view example</a>
   </div>
 </div>
 		<div class='preview'>
   <!--Simple-->
+  <div data-ratio='1-2' data-type='aspect-ratio'>
+    <div class='inner'>
+      <p>1-2 Aspect Ratio</p>
+    </div>
+  </div>
   <div data-ratio='1-1' data-type='aspect-ratio'>
     <div class='inner'>
       <p>1-1 Aspect Ratio</p>
+    </div>
+  </div>
+  <div data-ratio='16-9' data-type='aspect-ratio'>
+    <div class='inner'>
+      <p>16-9 Aspect Ratio</p>
     </div>
   </div>
   <div data-ratio='2-1' data-type='aspect-ratio'>
@@ -325,19 +335,29 @@
       <p>4-1 Aspect Ratio</p>
     </div>
   </div>
-  <div data-ratio='16-9' data-type='aspect-ratio'>
+  <div data-ratio='4-1' data-type='aspect-ratio'>
     <div class='inner'>
-      <p>16-9 Aspect Ratio</p>
+      <p>4-1 Aspect Ratio</p>
     </div>
   </div>
-  <div data-ratio='1-2' data-type='aspect-ratio'>
+  <div data-ratio='4-1' data-type='aspect-ratio'>
     <div class='inner'>
-      <p>1-2 Aspect Ratio</p>
+      <p>4-1 Aspect Ratio</p>
+    </div>
+  </div>
+  <div class='small' data-ratio='1-1' data-type='aspect-ratio'>
+    <div class='inner'>
+      <p>1-1.small</p>
+    </div>
+  </div>
+  <div class='small' data-ratio='1-1' data-type='aspect-ratio'>
+    <div class='inner'>
+      <p>1-1.small</p>
     </div>
   </div>
 </div>
 	</div>
-	<div id="background-tiles" class="open">
+	<div id="background-tiles">
 		<div class='description'>
   <div class='title'>
     <h2>Background Tiles</h2>
@@ -345,14 +365,20 @@
   <div class='inner'>
     <h1>Background Tiles</h1>
     <p>call your data-bg-style whatever you want and init it with</p>
-    <pre><code>$options = {&#x000A;    element : 'round', // default:false&#x000A;    col:4, //default:10&#x000A;    offset:'1',&#x000A;    bubble:false,&#x000A;    image:'assets/img/lorempixum2.jpg'&#x000A;  }&#x000A;new rabbitBG($options);&#x000A;.rabbit-bg{:'data-bg-style'=&gt;'simple'}</code></pre>
-    <span class='more'>view example</span>
+    <pre><code>/*js*/&#x000A;var $bg1 = {&#x000A;	style : 'simple',&#x000A;	identifier:1,&#x000A;	col:20,&#x000A;	offset:'.4',&#x000A;	image:'assets/img/lorempixum2.jpg'&#x000A;}&#x000A;new rabbitBG($options);</code></pre>
+    <pre><code>&lt;!-- haml --&gt;&#x000A;&#x000A;.rabbit-bg{:'data-bg-style'=&gt;'simple'}</code></pre>
+    <a class='more' href='#background-tiles'>view example</a>
   </div>
 </div>
 		<div class='preview'>
-  <div class='rabbit-bg' data-bg-style='simple'></div>
-  <div class='rabbit-bg' data-bg-style='round'></div>
+  <div class='rabbit-bg' data-bg-id='1' data-bg-style='simple' data-type='bg'></div>
+  <div class='rabbit-bg' data-bg-id='2' data-bg-style='rotate' data-type='bg'></div>
+  <div class='rabbit-bg' data-bg-id='3' data-bg-style='cube' data-type='bg'></div>
+  <div class='rabbit-bg' data-bg-id='4' data-bg-style='cube' data-type='bg'></div>
 </div>
 	</div>
+
+<div id="preview"></div>
+
 	<a href="https://github.com/saschas/rabbit" title="github">view on github</a>
 </div>

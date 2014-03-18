@@ -1,8 +1,14 @@
 .preview
 	<!--Simple-->
+	%div{:'data-type' => "aspect-ratio", :'data-ratio' =>"1-2"}
+		.inner
+			%p 1-2 Aspect Ratio
 	%div{:'data-type' => "aspect-ratio", :'data-ratio' =>"1-1"}
 		.inner
 			%p 1-1 Aspect Ratio
+	%div{:'data-type' => "aspect-ratio", :'data-ratio' =>"16-9"}
+		.inner
+			%p 16-9 Aspect Ratio
 	%div{:'data-type' => "aspect-ratio", :'data-ratio' =>"2-1"}
 		.inner
 			%p 2-1 Aspect Ratio
@@ -12,9 +18,15 @@
 	%div{:'data-type' => "aspect-ratio", :'data-ratio' =>"4-1"}
 		.inner
 			%p 4-1 Aspect Ratio
-	%div{:'data-type' => "aspect-ratio", :'data-ratio' =>"16-9"}
+	%div{:'data-type' => "aspect-ratio", :'data-ratio' =>"4-1"}
 		.inner
-			%p 16-9 Aspect Ratio
-	%div{:'data-type' => "aspect-ratio", :'data-ratio' =>"1-2"}
+			%p 4-1 Aspect Ratio
+	%div{:'data-type' => "aspect-ratio", :'data-ratio' =>"4-1"}
 		.inner
-			%p 1-2 Aspect Ratio
+			%p 4-1 Aspect Ratio
+	%div.small{:'data-type' => "aspect-ratio", :'data-ratio' =>"1-1"}
+		.inner
+			%p 1-1.small
+	%div.small{:'data-type' => "aspect-ratio", :'data-ratio' =>"1-1"}
+		.inner
+			%p 1-1.small

@@ -18,6 +18,33 @@
 	font-size:$size;
 }
 
+@mixin column($count){
+	-webkit-column-count: $count;
+	-moz-column-count: $count;
+	-o-column-count: $count;
+	column-count: $count;
+}
+
+@mixin column-break(){
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	-o-column-break-inside: avoid;
+	column-break-inside: avoid;
+}
+@mixin column-gap($gap){
+	-webkit-column-gap: $gap;
+	-moz-column-gap: $gap;
+	-o-column-gap: $gap;
+	column-gap: $gap;
+}
+
+@mixin border-radius($radius){
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	-o-border-radius:$radius;
+	border-radius:$radius;
+}
+
 @mixin box-shadow($x:0,$y:0,$feather:5px,$dist:0,$color:#000){
 	-webkit-box-shadow:$x $y $feather $dist $color;
 	-moz-box-shadow:$x $y $feather $dist $color;
@@ -55,6 +82,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
 	-moz-animation:$animationName $duration;
 	-o-animation:$animationName $duration;
 	animation:$animationName $duration;
+}
+
+@mixin transform-origin($x:0,$y:0){
+	-webkit-transform-origin: $x $y;
+	-moz-transform-origin: $x $y;
+	-o-transform-origin: $x $y;
+	transform-origin: $x $y;
 }
 
 @mixin translate($x:0){
